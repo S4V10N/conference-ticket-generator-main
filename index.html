@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="dist/styles.css" />
+        <script defer src="app.js"></script>
+
+        <title>Frontend Mentor | Conference ticket generator</title>
+    </head>
+    <body>
+        <header>
+            <img src="assets/images/logo-full.svg" alt="logo-icon" />
+        </header>
+        <main>
+            <section class="text">
+                <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+                <p>
+                    Secure your spot at next year's biggest coding conference.
+                </p>
+            </section>
+            <form method="post" id="form">
+                <!-- ADD USER PROFILE PICTURE AND "REMOVE" & "CHANGE IMAGE" -->
+                <fieldset>
+                    <legend>Upload Avatar</legend>
+                    <div>
+                        <label for="images" class="upload"
+                            ><img
+                                src="assets/images/icon-upload.svg"
+                                alt="upload-icon"
+                        /></label>
+                        <input
+                            type="file"
+                            name="images"
+                            id="images"
+                            class="hidden"
+                            required
+                        />
+                        <label for="images"
+                            >Drag and drop or click to upload</label
+                        >
+                    </div>
+                    <p class="info">
+                        <img
+                            src="assets/images/icon-info.svg"
+                            alt="info-icon"
+                        />Upload your photo (JPG or PNG, max size: 500KB).
+                    </p>
+                    <p class="error info">
+                        <img
+                            src="assets/images/icon-info.svg"
+                            alt="info-icon"
+                        />
+                        file too large, Please upload a photo under 500KB
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Full Name</legend>
+                    <input
+                        type="text"
+                        name="fName"
+                        id="fName"
+                        required
+                        autocomplete="off"
+                        class="input"
+                    />
+                    <p class="error info">
+                        <img
+                            src="assets/images/icon-info.svg"
+                            alt="info-icon"
+                        />Please enter a valid name.
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Email Address</legend>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="example@email.com"
+                        autocomplete="off"
+                        required
+                        class="input"
+                    />
+                    <p class="error info">
+                        <img
+                            src="assets/images/icon-info.svg"
+                            alt="info-icon"
+                        />Please enter a valid email address.
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>GitHub Username</legend>
+                    <input
+                        type="text"
+                        name="username"
+                        autocomplete="off"
+                        id="username"
+                        placeholder="@yourusername"
+                        required
+                        class="input"
+                    />
+                    <p class="error info">
+                        <img
+                            src="assets/images/icon-info.svg"
+                            alt="info-icon"
+                        />Please enter a valid username
+                    </p>
+                </fieldset>
+
+                <button type="submit">Generate My Ticket</button>
+            </form>
+
+            <section class="card" id="ticket">
+                <div class="ticket-container">
+                    <img
+                        src="assets/images/pattern-ticket.svg"
+                        alt="conference-ticket"
+                        class="ticket-card"
+                    />
+                    <div class="card__title">
+                        <img src="assets/images/logo-mark.svg" alt="logo" />
+                        <div class="text">
+                            <h2>Coding Conf</h2>
+                            <p>Jan 31, 2025 / Austin, TX</p>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <img
+                            src="assets/images/image-avatar.jpg"
+                            alt="user-profile"
+                        />
+                        <div>
+                            <h3 class="fullName">fName.value</h3>
+                            <h4 class="username">
+                                <img
+                                    src="assets/images/icon-github.svg"
+                                    alt="github-icon"
+                                />
+                                username.value
+                            </h4>
+                        </div>
+                    </div>
+                    <span class="code">#000000</span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >
+                Coded by
+                <a
+                    href="
+https://savion-dev.vercel.app"
+                    >Savion</a
+                >
+            </div>
+        </footer>
+    </body>
+</html>
