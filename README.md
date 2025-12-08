@@ -1,6 +1,6 @@
-# Frontend Mentor - Interactive pricing component solution
+# Frontend Mentor | Conference ticket generator solution
 
-This is a solution to the [Interactive pricing component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Conference ticket generator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/conference-ticket-generator-oq5gFIU12w). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -36,8 +36,8 @@ Your users should be able to:
 
 ### Links
 
--   Solution URL: [Github repo](https://github.com/S4V10N/interactive-pricing-component-main)
--   Live Site URL: [Live preview](https://interactive-pricing-component-main-bice.vercel.app/)
+-   Solution URL: [Github repo](https://github.com/S4V10N/conference-ticket-generator-main.git)
+-   Live Site URL: [Live preview](https://conference-ticket-generator-main-liart.vercel.app/)
 
 ## My process
 
@@ -52,7 +52,7 @@ Your users should be able to:
 
 i expanded my knowledge of event listeners in Js as well as better coding practices without breaking my back or reinventing the wheel.
 
-To see how you can add code snippets, see below:
+see code snippets below:
 
 ```sass
 .card__title
