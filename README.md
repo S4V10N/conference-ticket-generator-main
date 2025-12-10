@@ -50,7 +50,7 @@ Your users should be able to:
 
 ### What I learned
 
-i expanded my knowledge of event listeners in Js as well as better coding practices without breaking my back or reinventing the wheel.
+i expanded my knowledge on regex as well as enabling different states for the challenge.
 
 see code snippets below:
 
@@ -77,17 +77,10 @@ see code snippets below:
 ```
 
 ```js
-let discountApplied = false;
-
-applyDiscount.addEventListener("click", () => {
-    if (discountApplied) return;
-
-    let base = parseFloat(price.textContent);
-    let discounted = base - (base * 25) / 100;
-    price.textContent = discounted.toFixed(2);
-
-    discountApplied = true;
-});
+const updateText = () => {
+    titleText.innerHTML = successMessageOne;
+    titleParagraph.innerHTML = successMessageTwo;
+};
 ```
 
 ## Author

@@ -25,7 +25,7 @@
                     Secure your spot at next year's biggest coding conference.
                 </p>
             </section>
-            <form method="post" id="form">
+            <form id="form" novalidate>
                 <!-- ADD USER PROFILE PICTURE AND "REMOVE" & "CHANGE IMAGE" -->
                 <fieldset>
                     <legend>Upload Avatar</legend>
@@ -40,7 +40,6 @@
                             name="images"
                             id="images"
                             class="hidden"
-                            required
                         />
                         <label for="images"
                             >Drag and drop or click to upload</label
@@ -67,7 +66,6 @@
                         type="text"
                         name="fName"
                         id="fName"
-                        required
                         autocomplete="off"
                         class="input"
                     />
@@ -87,7 +85,6 @@
                         id="email"
                         placeholder="example@email.com"
                         autocomplete="off"
-                        required
                         class="input"
                     />
                     <p class="error info">
@@ -106,7 +103,6 @@
                         autocomplete="off"
                         id="username"
                         placeholder="@yourusername"
-                        required
                         class="input"
                     />
                     <p class="error info">

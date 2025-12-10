@@ -89,18 +89,20 @@ fieldset:has(div) div
     margin-bottom: 1rem
     transition: 1s ease-in-out
     position: relative
+    // &::before
+    //     content: ''
+    //     inset: 0
+    //     border: 2px solid var(--LIGHT-GREY)
+    //     position: absolute
+    //     border-radius: 1.5rem
+    //     top: 0
+    //     left: 0
+    //     transform: scaleX(1.03) scaleY(1.1)
+    //     z-index: 999
+
     &:hover
         cursor: pointer
         filter: brightness(120%)
-        &::before
-            content: ''
-            inset: 0
-            border: 2px solid var(--LIGHT-GREY)
-            position: absolute
-            border-radius: 1.5rem
-            top: 0
-            left: 0
-            transform: scaleX(1.03) scaleY(1.1)
 
 .info
     font-size: 1.4rem
@@ -121,14 +123,6 @@ fieldset:has(div) div
     padding-left: 1rem
     &:focus,&:active
         border: 6px double var(--LIGHT-GREY)
-
-.error
-    color: var(--ORANGE)
-    display: none
-    transform: translateY(0.2rem)
-
-.error-state
-    border: 2px solid var(--LIGHT-ORANGE)
 
 .input
     color: var(--WHITE)
@@ -237,6 +231,26 @@ main
 
 .hidden
     display: none
+
+.display
+    display: block
+
+.no-padding
+    padding: 0
+
+.preview
+    width: 6rem
+    height: 6rem
+    border-radius: 0.5rem
+
+.error
+    color: var(--ORANGE)
+    transform: translateY(0.2rem)
+
+.error-state
+    border: 2px solid var(--LIGHT-ORANGE)
+    &:focus
+        border: 2px solid var(--LIGHT-ORANGE)
 @media (min-width: 600px)
     body
         background-image: url(../../assets/images/pattern-lines.svg), url(../../assets/images/pattern-squiggly-line-top.svg), url(../../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),url(../../assets/images/background-tablet.png)
