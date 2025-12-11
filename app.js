@@ -15,14 +15,6 @@ const uploadImg = document.querySelector("#images");
 const previewImg = document.querySelector(".upload img");
 const titleParagraph = document.querySelector(".text p");
 
-let allowOpen = true;
-
-upload.onclick = () => {
-    if (allowOpen) {
-        uploadImg.click();
-    }
-};
-
 uploadImg.addEventListener("change", sizeValidation);
 
 function sizeValidation(e) {
@@ -30,23 +22,34 @@ function sizeValidation(e) {
     const maxSizeKb = 500;
     const maxSizeInBytes = maxSizeKb * 1024;
 
+    const allowedTypes = ["image/jpeg", "image/png"];
+    const msg = document.querySelector(".msg");
+
     upload.classList.remove("no-padding");
 
-    if (!file) return;
-
-    const allowedTypes = ["image/jpeg", "image/png"];
+    if (!file) {
+        errorMsg[0].classList.add("hidden");
+        msg.classList.add("hidden");
+        previewImg.src = "";
+        ticketImg.src = "";
+        previewImg.classList.remove("preview");
+        return;
+    }
 
     if (!allowedTypes.includes(file.type) || file.size > maxSizeInBytes) {
         errorMsg[0].classList.remove("hidden");
+        msg.classList.add("hidden");
+
         previewImg.src = "";
         previewImg.classList.remove("preview");
         ticketImg.src = "";
+
         allowOpen = true;
         return;
     }
 
     errorMsg[0].classList.add("hidden");
-    allowOpen = true;
+    msg.classList.remove("hidden");
 
     const reader = new FileReader();
     reader.onload = (ev) => {
@@ -60,6 +63,8 @@ function sizeValidation(e) {
     };
 
     reader.readAsDataURL(file);
+
+    allowOpen = true;
 }
 
 email.addEventListener("input", () => {
