@@ -50,7 +50,7 @@ Your users should be able to:
 
 ### What I learned
 
-i expanded my knowledge on regex as well as enabling different states for the challenge.
+i expanded my knowledge on regex and advanced validation, safe to say i got my hands dirty
 
 see code snippets below:
 
@@ -77,10 +77,18 @@ see code snippets below:
 ```
 
 ```js
-const updateText = () => {
-    titleText.innerHTML = successMessageOne;
-    titleParagraph.innerHTML = successMessageTwo;
-};
+email.addEventListener("input", () => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const str = email.value.trim();
+
+    if (!regex.test(str) || str.length < 1) {
+        email.classList.add("error-state");
+        errorMsg[2].classList.remove("hidden");
+    } else {
+        email.classList.remove("error-state");
+        errorMsg[2].classList.add("hidden");
+    }
+});
 ```
 
 ## Author
