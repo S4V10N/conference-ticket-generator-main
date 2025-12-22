@@ -37,7 +37,7 @@ Your users should be able to:
 ### Links
 
 -   Solution URL: [Github repo](https://github.com/S4V10N/conference-ticket-generator-main.git)
--   Live Site URL: [Live preview](https://conference-ticket-generator-main-liart.vercel.app/)
+-   Live Site URL: [Live preview](https://tip-calculator-app-main-delta-six.vercel.app/)
 
 ## My process
 
